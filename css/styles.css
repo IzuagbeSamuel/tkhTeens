@@ -72,6 +72,10 @@ body {
   border-bottom: 2px solid black;
 }
 
+.navbar a.active {
+  border-bottom: 2px solid black;
+}
+
 .navbar .flex{
   justify-content: space-between;
 }
