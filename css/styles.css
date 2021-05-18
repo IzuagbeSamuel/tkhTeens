@@ -135,8 +135,8 @@ body {
   cursor: pointer;
   background: rgb(189, 189, 226);
   color: black;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid white;
+  border-radius: 10px;
   margin-bottom: 20px ;
 }
 
@@ -157,7 +157,59 @@ body {
 }
 
 .bg h4 {
-  padding-top: 70px;
+  padding-top: 50px;
+}
+
+.bg p {
+  color: white;
+  text-align: center;
+}
+
+.showcase-form{
+  position: relative;
+  top: -100px;
+  height: 530px;
+  width: 300px;
+  padding: 50px;
+  z-index: 80;
+  background-color: var(--primary-color);
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 40px;
+  text-align: center;
+  display: block;
+}
+
+#form {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.showcase-form h4{
+  text-align: center;
+}
+
+
+.showcase-form .form-control{
+  margin: 5px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form textarea[name='message'],
+.showcase-form input[type='email']{
+   border: 0;
+   width: 100%;
+   padding: 15px;
+   font-size: 16px;
+   border-radius: 20px;
+   resize: none;
+}
+
+.showcase-form input:focus,
+.showcase-form textarea:focus{
+  outline: none;
 }
 
 .btn-outline{
@@ -168,9 +220,22 @@ body {
   transform: scale(0.90);
 }
 
+
+.hide {
+  margin: 30px;
+  padding: 40px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  display: none;
+}
+
+.hide b {
+  float: right;
+}
+
 .body-content{
   margin: 20px;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .body-content p{
@@ -186,7 +251,7 @@ body {
 }
 
 .body-content h1{
-  padding-top: 40px;
+  padding-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -209,11 +274,40 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  width: 70%;
+  width: 50%;
 }
 
 
 .bible-verses {
   text-align: center;
   border: 2px solid var(--primary-color);
+}
+
+.footer{
+  background-color: var(--primary-color);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer img{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.footer h1, p{
+  text-align: left;
+  margin-left: 30px;
+  color: black;
+}
+
+.footer div{
+  text-decoration: underline white;
+}
+
+
+.footer b{
+  text-align: center;
+  margin-left: 30px ;
+  color:black;
+  font-size: 14px;
 }
