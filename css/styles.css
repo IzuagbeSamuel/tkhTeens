@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgb(189, 189, 226);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.6;
+  color: black;
+}
+
+.logo {
+  margin-left: 5px;
+}
+
+.navbar{
+  background-color: var(--primary-color);
+  color: black;
+  height: 130px;
+}
+
+.navbar h1 {
+  text-align: center;
+  font-size: 23px;
+}
+
+.navbar small {
+  font-size: 17px;
+  color: white;
+}
+
+.navbar ul{
+  display:flex;
+  padding-top: 10px;
+}
+
+
+.navbar a{
+  color: black;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.navbar a:hover{
+  border-bottom: 2px solid black;
+}
+
+.navbar .flex{
+  justify-content: space-between;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+}
+
+
+@media (max-width: 800px){
+  .flex{
+    flex-direction: column;
+  }
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: black;
+  margin-top: 50px;
+  transition: 1.5s;
+  text-align: center;
+}
+
+.alert h2 {
+  padding-left: 30px;
+}
+
+.alert h4, p {
+  color: white;
+}
+
+
+.closebtn {
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 40px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.closebtn:hover{
+  color: white;
+}
+
+
+.btn{
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  background: rgb(189, 189, 226);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px ;
+}
+
+.btn a{
+  color: black;
+}
+
+.bg {
+  background-image: url(../images/path.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin-top: 30px;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.bg h4 {
+  padding-top: 70px;
+}
+
+.btn-outline{
+  background-color: black;
+}
+
+.btn:hover{
+  transform: scale(0.90);
+}
+
+.body-content{
+  margin: 20px;
+  padding-top: 50px;
+}
+
+.body-content p{
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.body-content li{
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.body-content h1{
+  padding-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.body-content span{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.body-content b {
+  color: rgb(91, 91, 145);
+}
+
+.body-content button{
+  margin-left: 20px;
+}
+
+
+.body-content img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 40%;
+}
+
+
+.bible-verses {
+  text-align: center;
+  border: 2px solid var(--primary-color);
+}
