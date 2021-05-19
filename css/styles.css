@@ -289,7 +289,9 @@ body {
 
 
 .media a{
-  padding: 0.2px;
+  padding: 0.1px;
+  outline: none;
+  border: none;
 }
 
 #myBtn {
