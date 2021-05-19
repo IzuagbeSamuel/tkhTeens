@@ -289,7 +289,7 @@ body {
 
 
 .media a{
-  padding: 1px;
+  padding: 0.2px;
 }
 
 #myBtn {
@@ -319,16 +319,15 @@ body {
   margin-top: 30px;
 }
 
-.footer h1,
-p {
+.footer h1, p {
   text-align: left;
-  margin-left: 30px;
+  margin-left: 10px;
   color: black;
 }
 
 .footer b {
   text-align: center;
-  margin-left: 30px;
+  margin-left: 10px;
   color: black;
   font-size: 14px;
 }
