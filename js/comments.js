@@ -9,18 +9,8 @@ class Cmt {
 // UI Class: Handle Ui Tasks
 class UI {
   static displayComments() {
-    const StoredComments = [
-      {
-        name: 'Samuel',
-        comment: 'May God bless you'
-      },
-      {
-        name: 'Emmanuel',
-        comment: 'May God bless you'
-      }
-    ];
-
-    const comments = StoredComments;
+  
+    const comments = Store.getComments();
     comments.forEach((comment) => UI.addCommentToList(comment));
   }
 
@@ -43,7 +33,16 @@ class UI {
   }
 
   static showAlert(message, className) {
-     const div = document.createElement('div')
+     const div = document.createElement('div');
+     div.className = `alert alert-${className}`;
+     div.appendChild(document.createTextNode(message));
+     const showcase = document.querySelector('.showcase-form-2');
+     const form = document.querySelector('#comment-form');
+     showcase.insertBefore(div, form);
+
+     // Vanish 3s
+    setTimeout(() => document.querySelector('.alert-danger').remove(), 3000);
+    setTimeout(() => document.querySelector('.alert-success').remove(), 3000);
   }
 
   static clearFields() {
@@ -53,6 +52,34 @@ class UI {
 }
 
 // Store Class: Handles Storage
+class Store {
+   static getComments() {
+     let comments;
+     if (localStorage.getItem('comments') === null) {
+       comments = [];
+     } else {
+       comments = JSON.parse(localStorage.getItem('comments'));
+     }
+     return comments;
+  }
+
+  static addComment(comment) {
+    const comments = Store.getComments();
+    comments.push(comment);
+    localStorage.setItem('comments', JSON.stringify(comments));
+  }
+
+  static removeComment() {
+    const comments = Store.getComments();
+    comments.forEach((comment, index) => {
+      if(comment.name === nameTwo) {
+        comments.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('comments', JSON.stringify(comments));
+  }
+ }
 
 // Events: Display Comments
 document.addEventListener('DOMContentLoaded', UI.displayComments);
@@ -68,13 +95,19 @@ document.querySelector('#comment-form').addEventListener('submit', (e) => {
 
   // Validate
   if(name === '' || comment === '') {
-
-  } else {
+    UI.showAlert('Please fill in all fields', 'danger')
+;  } else {
     // Instantiate book
     const cmt = new Cmt(name, comment);
       
     // Add Book to UI
     UI.addCommentToList(cmt);
+
+    // Add comment to store
+    Store.addComment(comment);
+
+    // Success message
+    UI.showAlert('Comment Added', 'success');
 
     // Clear fields
     UI.clearFields()
@@ -83,5 +116,9 @@ document.querySelector('#comment-form').addEventListener('submit', (e) => {
 
 // Event: Remove a Book
 document.querySelector('#comment-list').addEventListener('click', (e) => {
+  e.preventDefault()
   UI.deleteComment(e.target)
+
+  // Success message
+  UI.showAlert('Comment Deleted', 'success');
 })

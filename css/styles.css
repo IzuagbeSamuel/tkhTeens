@@ -397,6 +397,9 @@ a.close-btn {
 
 .alert-success {
   background-color: green;
+  border-radius: 30px;
+  padding: 8px;
+  color: white;
 }
 
 .footer {
