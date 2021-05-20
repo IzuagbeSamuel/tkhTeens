@@ -41,8 +41,8 @@ class UI {
      showcase.insertBefore(div, form);
 
      // Vanish 3s
-    setTimeout(() => document.querySelector('.alert-danger').remove(), 3000);
-    setTimeout(() => document.querySelector('.alert-success').remove(), 3000);
+     setTimeout(() => document.querySelector('.alert-danger').remove(), 3000);
+     setTimeout(() => document.querySelector('.alert-success').remove(), 3000);
   }
 
   static clearFields() {
@@ -69,10 +69,10 @@ class Store {
     localStorage.setItem('comments', JSON.stringify(comments));
   }
 
-  static removeComment() {
+  static removeComment(cmt) {
     const comments = Store.getComments();
     comments.forEach((comment, index) => {
-      if(comment.name === nameTwo) {
+      if(comment.comment === cmt) {
         comments.splice(index, 1);
       }
     });
@@ -104,7 +104,7 @@ document.querySelector('#comment-form').addEventListener('submit', (e) => {
     UI.addCommentToList(cmt);
 
     // Add comment to store
-    Store.addComment(comment);
+    Store.addComment(cmt);
 
     // Success message
     UI.showAlert('Comment Added', 'success');
@@ -117,7 +117,10 @@ document.querySelector('#comment-form').addEventListener('submit', (e) => {
 // Event: Remove a Book
 document.querySelector('#comment-list').addEventListener('click', (e) => {
   e.preventDefault()
+  // Remove Book from UI
   UI.deleteComment(e.target)
+
+  Store.removeComment(e.target.parentElement.previousElementSibling.textContent);
 
   // Success message
   UI.showAlert('Comment Deleted', 'success');
