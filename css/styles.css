@@ -316,11 +316,10 @@ body {
 .showcase-form-2 {
   position: relative;
   top: -100px;
-  height: 400px;
+  height: 500px;
   width: 300px;
   padding: 50px;
   z-index: 80;
-  background-color: var(--primary-color);
   border-radius: 40px;
   text-align: center;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -348,11 +347,56 @@ body {
   font-size: 16px;
   border-radius: 20px;
   resize: none;
+  border: 2px solid var(--primary-color);
 }
 
 .showcase-form-2 input:focus,
 .showcase-form-2 textarea:focus {
   outline: none;
+}
+
+.table {
+  margin: auto;
+  width: 80%;
+  border: none;
+  border-collapse: collapse;
+}
+
+.table th {
+  border-top: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  text-align: left;
+}
+
+a.close-btn {
+  background-color: rgb(238, 68, 68);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+.close-btn {
+  outline: none;
+  border: none;
+}
+
+.table th, td, tbody {
+  padding: 10px;
+}
+
+.alert-danger {
+  background-color: red;
+  border-radius: 30px;
+  padding: 8px;
+  color: white;
+}
+
+.alert-success {
+  background-color: green;
 }
 
 .footer {

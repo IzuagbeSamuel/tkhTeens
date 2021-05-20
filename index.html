@@ -292,28 +292,29 @@
     <form id="comment-form">
       <h3>Please write down your comments</h3>
       <div class="form-control">
-       <input type="text" id="name" class="comment-control" placeholder="Name" required>
+       <input type="text" id="name-2" name="name" placeholder="Name">
       </div>
       <br>
       <div class="form-control">
-        <textarea name="comment" id="comments" cols="40" rows="4" placeholder="Comment"></textarea>
+        <textarea name="comment" id="comment" cols="40" rows="4" placeholder="Comment"></textarea>
         <br>
-        <input type="submit" value="Send" class="btn">
       </div>
+      <input type="submit" value="Send" class="btn">
     </form>
     <br>
     <br>
-    <table class="table table-striped mt-5">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Comments</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="comment-list"></tbody>
-    </table>
   </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Comments</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="comment-list"></tbody>
+  </table>
 
   
     
@@ -326,6 +327,7 @@
       </h1>
       <b>&copy;2021 The King's Heritage Teens. All Right Reserved</b>
     </footer>
-
+    
+    <script src="js/comments.js"></script>
   </body>
 </html>
