@@ -27,5 +27,13 @@ $(document).ready(function(){
         myButton.style.display = "none";
       }
   }
+
+  function fun() {
+    let $mail = document.getElementById('mail').value;
+    let $message = document.getElementById('message').value;
+    let $name = document.getElementById('name').value;
+
+    document.getElementById('f1').action+'mailto'+$mail+'?subject='+$message+"&body="+$name
+  }
 })
 

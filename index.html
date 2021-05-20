@@ -66,15 +66,9 @@
 
     <div class="showcase-form card" id="form">
       <h3>Lets get in touch with you and<br />write down your prayer.</h3>
-      <form method="get" type="post" action="mailto:thekingsheritageteens@gmail.com" enctype="text/plain">
+      <form method="POST" type="post" action="mailto:thekingsheritageteens@gmail.com" enctype="text/plain" id="f1">
         <div class="form-control">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            id="name"
-          />
+          <input type="text" name="name" placeholder="Name" required id="name"/>
         </div>
         <br />
         <div class="form-control">
@@ -82,13 +76,13 @@
         </div>
         <br />
         <div class="form-control">
-          <input type="text" name="email" placeholder="Email" required />
+          <input type="text" name="email" placeholder="Email" required id="mail" />
         </div>
         <br />
         <div class="form-control">
-          <textarea  name="message" placeholder="Your Prayer" required></textarea>
+          <textarea  name="message" placeholder="Your Prayer" required id="prayer"></textarea>
           <br />
-          <input type="submit" value="Send" class="btn" id="submit" name="submit"/>
+          <input type="submit" value="Send" class="btn" id="submit" name="submit" onclick=""/>
         </div>
       </form>
     </div>
@@ -130,7 +124,7 @@
             <p>
               <b
                 >"For Ezra had set his heart to study the Law of the Lord, and
-                to do it and to teach his statutes and rules in Isreal."</b
+                to do it and to teach his statutes and rules in Israel."</b
               >
             </p>
             <br />
@@ -291,6 +285,37 @@
     <div class="media">
     <button onclick="topFunction()" id="myBtn" title="Media Handle"><i class="fab fa-facebook fa-3x"><a href="https://web.facebook.com/The-Kings-Heritage-Teens-107020768242237"></a></i><br><br><br><i class="fab fa-instagram fa-3x"><a href=""></a></i><br><br><br><i class="fab fa-twitter fa-3x"><a href="https://twitter.com/king_teens"></a></i><br><br><br><i class="fas fa-envelope-square fa-3x"><a href="mailto:thekingsheritageteens@gmail.com"></a></i><br><br><br><i class="fab fa-youtube fa-3x"></i></button></button>
     <br>
+    <br>
+    <br>
+    <br>
+    <div class="showcase-form-2">
+    <form id="comment-form">
+      <h3>Please write down your comments</h3>
+      <div class="form-control">
+       <input type="text" id="name" class="comment-control" placeholder="Name" required>
+      </div>
+      <br>
+      <div class="form-control">
+        <textarea name="comment" id="comments" cols="40" rows="4" placeholder="Comment"></textarea>
+        <br>
+        <input type="submit" value="Send" class="btn">
+      </div>
+    </form>
+    <br>
+    <br>
+    <table class="table table-striped mt-5">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Comments</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="comment-list"></tbody>
+    </table>
+  </div>
+
+  
     
     <footer class="footer">
       <img src="images/tkh-new-logo300x180-1.png" alt="Logo" />
