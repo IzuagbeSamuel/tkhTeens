@@ -120,7 +120,7 @@ document.querySelector('#comment-list').addEventListener('click', (e) => {
   // Remove Book from UI
   UI.deleteComment(e.target)
 
-  Store.removeComment(e.target.parentElement.previousElementSibling.textContent);
+  Store.removeComment(e.target.parentElement.previousElementSibling.textContent());
 
   // Success message
   UI.showAlert('Comment Deleted', 'success');

@@ -170,7 +170,7 @@ body {
 
 .showcase-form {
   position: relative;
-  top: -100px;
+  top: 100px;
   height: 530px;
   width: 300px;
   padding: 50px;
