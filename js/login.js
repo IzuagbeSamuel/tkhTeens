@@ -5,7 +5,6 @@ class Form {
     this.lastName = lastName;
     this.userName = userName;
     this.password = password;
-    this.verPassword = verPassword;
   }
 }
 
@@ -26,7 +25,6 @@ class UI {
     document.querySelector('#lastName').value = '';
     document.querySelector('#userName').value = '';
     document.querySelector('#password').value = '';
-    document.querySelector('#password2').value = '';
   }
 }
 
@@ -39,17 +37,12 @@ let firstName = document.getElementById('firstName').value;
 let lastName = document.getElementById('lastName').value;
 let userName = document.getElementById('userName').value;
 let password = document.getElementById('password').value;
-let verPassword = document.getElementById('password2').value;
 
-  if(firstName === '' || lastName === '' || userName === '' || password === '' || verPassword === '') {
+  if(firstName === '' || lastName === '' || userName === '' || password === '') {
     UI.showAlert('Please fill in all fields', 'danger');
   } else {
     UI.showAlert('Account Created', 'success');
     UI.clearFields();
-  }
-
-  if(password !== verPassword) {
-    UI.showAlert('Password does not match', 'danger');
   }
 });
 
