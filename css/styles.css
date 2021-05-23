@@ -170,7 +170,7 @@ body {
 
 .showcase-form {
   position: relative;
-  top: 100px;
+  top: -140px;
   height: 530px;
   width: 300px;
   padding: 50px;
@@ -283,18 +283,19 @@ body {
   text-align: center;
 }
 
-.media i {
-  color: #365194;
-}
-
-
 .media a{
   padding: 0.2px;
+  border: none;
+  outline: none;
+  color: blue;
 }
 
-.media a:hover {
-  border: 1px solid #365194;
+.media button {
+  border: none;
+  outline: none;
 }
+
+
 
 #myBtn {
   display: none;
