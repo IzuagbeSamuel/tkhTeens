@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: rgb(189, 189, 226);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.6;
+  color: black;
+}
+
+.logo {
+  margin-left: 5px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: black;
+  height: 130px;
+}
+
+.navbar h1 {
+  text-align: center;
+  font-size: 23px;
+}
+
+.navbar small {
+  font-size: 17px;
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  padding-top: 10px;
+}
+
+.navbar a {
+  color: black;
+  padding: 5px 10px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid black;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid black;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+  }
+}
