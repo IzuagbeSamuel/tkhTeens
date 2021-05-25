@@ -1,5 +1,5 @@
-$(document).ready(function(){
   myButton = document.getElementById("myBtn");
+  
   window.onscroll = function() {
     scrollFunction()
   };
@@ -12,5 +12,4 @@ $(document).ready(function(){
         myButton.style.display = "none";
       }
   }
-})
 

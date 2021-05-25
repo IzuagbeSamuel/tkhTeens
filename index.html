@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/scripts.js"></script>
     <script
       src="https://kit.fontawesome.com/a15138ce98.js"
       crossorigin="anonymous"
@@ -66,23 +65,23 @@
 
     <div class="showcase-form card" id="form">
       <h3>Lets get in touch with you and<br />write down your prayer.</h3>
-      <form method="POST" type="post" action="mailto:thekingsheritageteens@gmail.com" enctype="text/plain" id="f1">
+      <form method="POST" type="post" action="mailto:thekingsheritageteens@gmail.com" enctype="text/plain">
         <div class="form-control">
-          <input type="text" name="name" placeholder="Name" required id="name"/>
+          <input type="text" name="Name" placeholder="Name" id="name" class="name" required/>
         </div>
         <br />
         <div class="form-control">
-          <input type="text" name="lastName" placeholder="Last Name" required />
+          <input type="text" name="LastName" placeholder="Last Name" id="firstName" required/>
         </div>
         <br />
         <div class="form-control">
-          <input type="text" name="email" placeholder="Email" required id="mail" />
+          <input type="text" name="Email" placeholder="Email" id="mail" required />
         </div>
         <br />
         <div class="form-control">
-          <textarea  name="message" placeholder="Your Prayer" required id="prayer"></textarea>
+          <textarea  name="Message" placeholder="Your Prayer" id="prayer" required></textarea>
           <br />
-          <input type="submit" value="Send" class="btn" id="submit" name="submit" onclick=""/>
+          <input type="submit" value="Send" class="btn" id="submit" onclick=""/>
         </div>
       </form>
     </div>
@@ -92,7 +91,10 @@
       <h1>Your Request has been Recorded<br /><br /><b>God Bless You</b></h1>
     </div>
     <br />
-    <br />
+  
+    <div class="mid-pic">
+      <img src="images/cross.jpg" alt="">
+    </div>
 
     <div class="body-content">
       <h1>Your Responsibilities as a Christian</h1>
@@ -277,6 +279,33 @@
               <p><b>" In the multitude of words there wanteth not sin: but he that refraineth his lips is wise"</b></p>
             </ul>
           </div>
+          <br>
+
+          <li><h3>ATTEND CHURCH MEETINGS</h3></li>
+          <img src="images/meetings.jpg" alt="">
+          <p>The New Testament passages talks about local congregations of God's people conducting regular meetings to worship God and study his word. These meetings are prepared to give blessings to those who attend. There are reasons why attending meetings is a responsibility as a Christian
+          </p>
+          <ol>
+            <li>To worship and praise God <b>(Acts 2:42)</b></li>
+            <li>To give and receive instructions <b>(Hebrew 5:12)</b></li>
+            <li>To set a good example <b>(1 Timothy 4:12)</b></li>
+            <li>To practice what we know is right <b>(Matthew 6:5-7)</b></li>
+            <li>To imitate Jesus and other Faithful Disciples <b>(Philippians 3:17)</b></li>
+          </ol>
+          <br>
+
+          <div class="bible-verses">
+            <ul>
+              <li><b>(Matthew 18:20)</b></li>
+              <p><b>"For where two or three are gathered together in my name, there am I in the midst of them."</b></p>
+              <br>
+              <li><b>(Romans 12:4-5)</b></li>
+              <p><b>4. "For as we have many members in one body, and all members have not the same office 5. So we, being many, are one body in Christ, and every one members one of another."</b></p>
+            </ul>
+          </div>
+          <br>
+          <br>
+          <br>
       </ol>
     </div>
     <br>
@@ -327,7 +356,7 @@
       </h1>
       <b>&copy;2021 The King's Heritage Teens. All Right Reserved</b>
     </footer>
-    
-    <script src="js/comments.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/UI.js"></script>
   </body>
 </html>
